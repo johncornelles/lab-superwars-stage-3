@@ -31,31 +31,7 @@ const initPlayers = (players) => {
         let x = index % 2 ? "villain" : "hero"
         let new_players = {
             name: names,
-            image: `images/super-${index+1
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            }.png`,
+            image: `images/super-${index+1}.png`,
             type: x,
             strength: getRandomStrength()
         }
