@@ -28,14 +28,15 @@ const initPlayers = (players) => {
     // Instead of forloop use Map method
     // Code here
     players.map((names, index) => {
-        let x = index % 2 ? "villain" : "hero"
-        let new_players = {
+        let a = index % 2 ? "villain" : "hero"
+        let newPlayers = {
             name: names,
-            image: `images/super-${index+1}.png`,
-            type: x,
+            type: a,
+            image: `images/super-${index + 1}.png`,
             strength: getRandomStrength()
         }
-        detailedPlayers.push(new_players)
+        detailedPlayers.push(newPlayers)
+
     })
 
     return detailedPlayers;
@@ -54,16 +55,17 @@ const buildPlayers = (players, type) => {
     // Use chaining of Array methods - filter, map and join
     // Type your code here
     players.map((player) => {
-        if (player.type == type){
-
+        if (player.type == type) {
             let div = `<div class="player">
                         <img src="${player.image}" alt="">
-                        <div class="name">${player.name}</div>  
+                        <div class="name">${player.name}</div>
                         <div class="strength">${player.strength}</div>
-                       </div>`;
-            fragment += div;
+                        </div>`;
+            fragment += div
+
         }
     })
+
     return fragment;
 }
 
